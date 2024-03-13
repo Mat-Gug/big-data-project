@@ -25,8 +25,8 @@ This project consists of 2 different Databricks notebooks:
         - Text cleaning, consisting of a first part where tokenization of text, lowercase conversion, and removal of punctuation, digits, and whitespace have been carried out. Then, common English stop words have been removed, and lemmatization has been applied. Finally, only cleaned documents with a minimum token count have been retained.
 
     Once doing this, the hyperparameter tuning has been performed. In particular, the pipeline being tuned was made of:
-        * a text feature extraction part, consisting of a TF-IDF (Term Frequency-Inverse Document Frequency) transformation, followed by a normalization of the resulting values.
-        * the model to train. For computational speed reasons, it has been decided to run the algorithm only considering Naive Bayes as the classifier type, even though commented lines are present in the notebook, which would allow to run the algorithm considering more than one type of classifier, such as Logistic Regression and Random Forest.
+    * a text feature extraction part, consisting of a TF-IDF (Term Frequency-Inverse Document Frequency) transformation, followed by a normalization of the resulting values.
+    * the model to train. For computational speed reasons, it has been decided to run the algorithm only considering Naive Bayes as the classifier type, even though commented lines are present in the notebook, which would allow to run the algorithm considering more than one type of classifier, such as Logistic Regression and Random Forest.
 
     After the hyperparameter tuning, the model's hyperparameters providing the highest accuracy have been used to retrain the model on the entire training set (train+validation), and its performance on the test set has been assessed, by computing the accuracy value and building the confusion matrices for both the train and test set. Finally, the same model has been trained using the `documents` column, in order to compare the performance of the two models and see what was the most accurate one.
 
